@@ -36,7 +36,11 @@ Once installed, execute this command to load the package
 library(maSigPro)
 ```
 
-## Step 1: Run Defining_Regression_Model.R line by line
+## Step 1: Importing files into R
+```
+data <- read.delim("~/directory/pathway/filename.txt", row.names = 1)
+edesign <- read.delim("~/directory/pathway/filename.txt", row.names = 1)
+```
 
 ## Step 2: Run Finding_Significant_Genes.R line by line
 
