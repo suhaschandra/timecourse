@@ -59,6 +59,10 @@ Optional
 2. **repl.col**: column number in edesign containing coding for replicate arrays; default is second column
 3. **groups.col**: column numbers in edesign indicating the codinf for each experimental group
 
-## Step 3: Run Finding_Significant_Differences.R line by line
+## Step 3: Finding Significant Genes
+```
+fit <- p.vector(data, design, Q = 0.05, min.obs = min.obs)
+```
+### Overview
 
 ## Step 4: Run Obtaining_Lists.R line by line
