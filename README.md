@@ -6,9 +6,11 @@ MaSigPro follows a two-step regression strategy to find genes with significant t
 ### Rstudio
 Rstudio is an integrated development environment for R that includes a console with tools for plotting, history, debugging, and workspace management. It is recommended, but not necessary, to operate this pipeline on a local computer with R and Rstudio installed. The Rstudio interface allows the user to easily monitor each step of the pipeline. Download sources for R and Rstudio are below.
 
-  https://cran.cnr.berkeley.edu/
-  https://www.rstudio.com/products/rstudio/download/#download
-  
+```
+ https://cran.cnr.berkeley.edu/
+ https://www.rstudio.com/products/rstudio/download/#download
+``` 
+ 
 ### Data object
 The data object should be a tab delimited text file that contains the normalized count data. Within the data frame, the row names should be an array of gene names, and the column names should be an array of the individual observation points per time point per replicate.
 
@@ -18,15 +20,21 @@ The experimental design object will provide the information required to construc
 ## Installing
 MaSigPro can be obtained on the bioconductor page:
 
-  https://bioconductor.org/packages/release/bioc/html/maSigPro.html
+```
+https://bioconductor.org/packages/release/bioc/html/maSigPro.html
+```
 
 or through executing in R the command
 
-  install.packages("maSigPro") 
+```
+install.packages("maSigPro") 
+```
 
 Once installed, execute this command to load the package
 
-  library(maSigPro)
+```
+library(maSigPro)
+```
 
 ## Step 1: Run Defining_Regression_Model.R line by line
 
