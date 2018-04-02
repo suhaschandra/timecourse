@@ -48,12 +48,11 @@ design <- make.design.matrix(edesign, degree = degree)
 ```
 This function uses the experimental design data frame and degrees of freedom to define the regression model that will be used to identify significant genes.
 
-### Parameters
-Required
+Required parameters
 1. **edesign**: experimental design data frame
 2. **degree**: degrees of freedom; equal to 1 less than the # of time points
 
-Optional
+Optional parameters
 1. **time.col**: column number in edesign containing time values; default is first column
 2. **repl.col**: column number in edesign containing coding for replicate arrays; default is second column
 3. **groups.col**: column numbers in edesign indicating the codinf for each experimental group
@@ -64,8 +63,7 @@ fit <- p.vector(data, design, Q = 0.05, min.obs = min.obs)
 ```
 The function "p.vector" computes a regression fit for each gene as well as the p-value associated with the F-statistic of the model which is used to select siginificant genes. By default, this p-value is corrected for multiple comparisons using the linear step-up false discovery rate procedure developed by Benjamini and Hochberg. 
 
-### Parameters
-Required
+Required parameters
 1. **data**: data object
 2. **design**: design object from previous step
 3. **Q**: level of FDR control
@@ -77,10 +75,9 @@ tstep <- T.fit(fit, step.method = "backward")
 ```
 The function "T.fit" uses stepwise regression to identify siginificant variables in each gene. Stepwise regression evaluates the each variable for its contribution to increasing the R-squared value for the model.
 
-### Parameters
-Required
+Required parameters
 1. **fit**: p.vector object from previous step
 2. **step.method**: "backward", "forward", "two.ways.backward", "two.ways.forward"; default is "backward"
 
-Optional
+Optional parameters
 1. 
