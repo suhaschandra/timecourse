@@ -63,7 +63,7 @@ fit <- p.vector(data, design, Q = 0.05, min.obs = min.obs)
 ```
 The function "p.vector" computes a regression fit for each gene as well as the p-value associated with the F-statistic of the model which is used to select siginificant genes. By default, this p-value is corrected for multiple comparisons using the linear step-up false discovery rate procedure developed by Benjamini and Hochberg. 
 
-Required parameters
+Parameters
 1. **data**: data object
 2. **design**: design object from previous step
 3. **Q**: level of FDR control
@@ -83,3 +83,20 @@ Optional parameters
 1. **alfa**: significance value; default uses input for "Q" in previous step
 
 ## Step 5: Obtaining Lists of Significant Genes
+```
+sigs <- get.siggenes(tstep, rsq = 0.7, vars = "groups")
+```
+The function "get.siggenes" generates lists of significant genes according to user input
+
+Parameters
+1. **rsq**: cutoff value from 0 - 1 for the R-squared of the regression model; higher rsq equates to a less populated list
+2. **vars**: indicates how to group variables to show results
+ a. *"groups"*: generates one list of significant genes for each group; the first group will be treated as the reference group and compared to a zero change profile; the remaining groups will be compared to the reference group 
+ b. *"all"*: generates one list of significant genes for the entire experiment
+ c. *"each"*: generates one list of significant genes for each variable in the regression model
+ 
+## Step 6: Exporting Lists of Significant Genes
+```
+write.table(sigs$summary, "~/directory/pathway/filename.txt", sep = "\t", quote = FALSE)
+```
+ 
