@@ -101,4 +101,4 @@ write.table(sigs$summary, "~/directory/pathway/filename.txt", sep = "\t", quote 
 ```
 ## References
 * [maSigPro user guide] (https://bioconductor.org/packages/release/bioc/vignettes/maSigPro/inst/doc/maSigProUsersGuide.pdf)
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/)
+* [maSigPro user guide](https://bioconductor.org/packages/release/bioc/vignettes/maSigPro/inst/doc/maSigProUsersGuide.pdf)
