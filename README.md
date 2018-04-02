@@ -46,7 +46,6 @@ edesign <- read.delim("~/directory/pathway/filename.txt", row.names = 1)
 ```
 design <- make.design.matrix(edesign, degree = degree)
 ```
-### Overview
 This function uses the experimental design data frame and degrees of freedom to define the regression model that will be used to identify significant genes.
 
 ### Parameters
