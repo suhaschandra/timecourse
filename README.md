@@ -80,4 +80,6 @@ Required parameters
 2. **step.method**: "backward", "forward", "two.ways.backward", "two.ways.forward"; default is "backward"
 
 Optional parameters
-1. 
+1. **alfa**: significance value; default uses input for "Q" in previous step
+
+## Step 5: Obtaining Lists of Significant Genes
