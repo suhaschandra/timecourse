@@ -90,7 +90,7 @@ The function "get.siggenes" generates lists of significant genes according to us
 
 Parameters
 1. **rsq**: cutoff value from 0 - 1 for the R-squared of the regression model; higher rsq equates to a less populated list
-2. **vars**: indicates how to group variables to show results
+2. **vars**: indicates how to group variables to show results:
  * *"groups"*: generates one list of significant genes for each group; the first group will be treated as the reference group and compared to a zero change profile; the remaining groups will be compared to the reference group 
  * *"all"*: generates one list of significant genes for the entire experiment
  * *"each"*: generates one list of significant genes for each variable in the regression model
