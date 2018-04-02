@@ -42,8 +42,22 @@ data <- read.delim("~/directory/pathway/filename.txt", row.names = 1)
 edesign <- read.delim("~/directory/pathway/filename.txt", row.names = 1)
 ```
 
-## Step 2: Run Finding_Significant_Genes.R line by line
+## Step 2: Defining the Regression Model
+```
+design <- make.design.matrix(edesign, degree = degree)
+```
+### Overview
+This function uses the experimental design data frame and degrees of freedom to define the regression model that will be used to identify significant genes.
 
+### Parameters
+Required
+1. edesign: experimental design data frame
+2. degree: degrees of freedom; equal to 1 less than the # of time points
+
+Optional
+1. time.col: column number in edesign containing time values; default is first column
+2. repl.col: column number in edesign containing coding for replicate arrays; default is second column
+3. groups.col: column numbers in edesign indicating the codinf for each experimental group
 ## Step 3: Run Finding_Significant_Differences.R line by line
 
 ## Step 4: Run Obtaining_Lists.R line by line
