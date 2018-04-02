@@ -62,6 +62,25 @@ Optional
 ```
 fit <- p.vector(data, design, Q = 0.05, min.obs = min.obs)
 ```
-### Overview
+The function "p.vector" computes a regression fit for each gene as well as the p-value associated with the F-statistic of the model which is used to select siginificant genes. By default, this p-value is corrected for multiple comparisons using the linear step-up false discovery rate procedure developed by Benjamini and Hochberg. 
 
-## Step 4: Run Obtaining_Lists.R line by line
+### Parameters
+Required
+1. **data**: data object
+2. **design**: design object from previous step
+3. **Q**: level of FDR control
+4. **min.obs**: For every gene calculates # of non-0 observations (say Y). If Y < min obs, get rid of that gene. Recommended = (# groups)(# time points) +1
+
+## Step 4: Finding Significant Differences
+```
+tstep <- T.fit(fit, step.method = "backward")
+```
+The function "T.fit" uses stepwise regression to identify siginificant variables in each gene. Stepwise regression evaluates the each variable for its contribution to increasing the R-squared value for the model.
+
+### Parameters
+Required
+1. **fit**: p.vector object from previous step
+2. **step.method**: "backward", "forward", "two.ways.backward", "two.ways.forward"; default is "backward"
+
+Optional
+1. 
