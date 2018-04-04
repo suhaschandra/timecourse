@@ -22,18 +22,13 @@ The experimental design object will provide the information required to construc
 Reference "edesign.abiotic.txt" for an example
 
 ## Installing
-MaSigPro can be obtained on the bioconductor page:
+MaSigPro can be obtained with the following commands:
 
 ```
-https://bioconductor.org/packages/release/bioc/html/maSigPro.html
+## try http:// if https:// URLs are not supported
+source("https://bioconductor.org/biocLite.R")
+biocLite("maSigPro")
 ```
-
-or through executing in R the command
-
-```
-install.packages("maSigPro") 
-```
-
 Once installed, execute this command to load the package
 
 ```
