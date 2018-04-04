@@ -40,6 +40,7 @@ library(maSigPro)
 data <- read.delim("~/directory/pathway/filename.txt", row.names = 1)
 edesign <- read.delim("~/directory/pathway/filename.txt", row.names = 1)
 ```
+Rstudio supports a graphical interface for importing data files into the global environment. Rather than manually using the commands above, the user can preview the import for correctness by using the interface. Locate the import dataset drop down menu. Select "From Text (base)" and then navigate the Finder to open the desired file. The parameter adjustment menu should then open. Check "yes" for Heading and "use first column" for row names.
 
 ## Step 2: Defining the Regression Model
 ```
