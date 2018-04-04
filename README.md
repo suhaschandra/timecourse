@@ -103,6 +103,15 @@ Parameters
 ```
 write.table(sigs$summary, "~/directory/pathway/filename.txt", sep = "\t", quote = FALSE)
 ```
+## Useful Functions in Rstudio
+To access help window
+```
+help()
+```
+To access underlying code of a function
+```
+getAnywhere()
+```
 ## References
 * [maSigPro user guide](https://bioconductor.org/packages/release/bioc/vignettes/maSigPro/inst/doc/maSigProUsersGuide.pdf)
 * [bioconductor](https://bioconductor.org/packages/release/bioc/html/maSigPro.html)
