@@ -101,8 +101,16 @@ write.table(sigs$summary, "~/directory/pathway/filename.txt", sep = "\t", quote 
 ```
 ## Step 6: Visualizing Clusters
 ```
-clusters <- see.genes(sigs$sig.genes, cluster.method = "hclust", k = 9)
+clusters <- see.genes(data = sigs$sig.genes, edesign = data$edesign, cluster.method = "hclust", k = 9, newX11 = TRUE)
 ```
+The function "see.genes" performs a cluster analysis to group genes by similar profiles.
+
+Parameters
+1. **data**: data object; sigs$sig.genes$group_name or similarly formatted data object as initial input 
+2. **edesign**: will need to specify if data object does not come from a get.siggenes object
+3. **k**: number of clusters for data partitioning; default = 9
+4. **cluster.method**: clustering method; hclust, kemans, Mclust
+5. **newX11**: by default, "see.genes" will create the cluster graphs in Xquartz
 
 ## Useful Functions in Rstudio
 To access help window
