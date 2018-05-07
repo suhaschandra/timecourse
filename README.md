@@ -95,10 +95,15 @@ Parameters
  * *"all"*: generates one list of significant genes for the entire experiment
  * *"each"*: generates one list of significant genes for each variable in the regression model
  
-## Step 6: Exporting Lists of Significant Genes
+## Exporting Lists of Significant Genes
 ```
 write.table(sigs$summary, "~/directory/pathway/filename.txt", sep = "\t", quote = FALSE)
 ```
+## Step 6: Visualizing Clusters
+```
+clusters <- see.genes(sigs$sig.genes, cluster.method = "hclust", k = 9)
+```
+
 ## Useful Functions in Rstudio
 To access help window
 ```
