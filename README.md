@@ -125,4 +125,4 @@ getAnywhere()
 * [maSigPro user guide](https://bioconductor.org/packages/release/bioc/vignettes/maSigPro/inst/doc/maSigProUsersGuide.pdf)
 * [bioconductor](https://bioconductor.org/packages/release/bioc/html/maSigPro.html)
 
-### Written by Brian Ligh
+Written by Brian Ligh
